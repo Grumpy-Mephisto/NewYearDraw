@@ -1,0 +1,12 @@
+# Bin
+*.class
+*.o
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+
+# Gradle
+.gradle/
+build/
