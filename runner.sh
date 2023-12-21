@@ -32,3 +32,6 @@ if [ $? -eq 0 ]; then
 else
     echo -e "${RED}Failed${NC}"
 fi
+
+# Remove all generated .class files recursively
+find . -name '*.class' -exec rm -f {} +
