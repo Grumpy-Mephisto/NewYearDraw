@@ -27,7 +27,7 @@ public class Tree {
             int[] xArr = {x, x + TreeTriangleWidth / 2, x + TreeTriangleWidth};
             int[] yArr = {y + TreeTriangleHeight, y / 2, y + TreeTriangleHeight};
             triangle.drawFillPolygonTriangle(g2d, xArr[0], yArr[0], xArr[1], yArr[1], xArr[2],
-                    yArr[2]);
+                    yArr[2], true);
         }
     }
 }
