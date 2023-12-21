@@ -17,6 +17,8 @@ public class Snowman {
         private Line line = new Line();
         private Circle circle = new Circle();
 
+        private String[] SnowmanColors = {"#ffffff", "#000000"};
+
         public void draw(Graphics2D g2d, int width, int height) {
                 totalHeight = ((0.75) * height);
                 bottomDiameter = (totalHeight) / 4;
@@ -25,7 +27,7 @@ public class Snowman {
                         bottomDiameter = width;
                 }
 
-                g2d.setColor(Color.WHITE);
+                g2d.setColor(Color.decode(SnowmanColors[0]));
 
                 middleDiameter = ((bottomDiameter) * (2.0 / 3.0));
                 headDiameter = (1.0 / 3.0) * (bottomDiameter);
@@ -48,8 +50,9 @@ public class Snowman {
                 // Head Oval
                 circle.drawCircle(g2d, centerX, (int) headCenterY, (int) (headDiameter / 2), true);
 
+                g2d.setColor(Color.decode(SnowmanColors[1]));
+
                 // Eyes Fill Oval
-                g2d.setColor(Color.BLACK);
                 circle.drawCircle(g2d, (int) ((centerX) - (headDiameter / 4)),
                                 ((int) (headCenterY - (headDiameter / 4))), (int) eyeDiameter / 2,
                                 true);

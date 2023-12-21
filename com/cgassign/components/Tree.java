@@ -1,13 +1,15 @@
 package com.cgassign.components;
 
 import java.awt.*;
-import com.cgassign.functions.Triangle;
+import com.cgassign.functions.*;
 
 public class Tree {
     private int TreeLayers;
     private int TreeTriangleHeight;
 
     private Triangle triangle = new Triangle();
+
+    private String[] TreeColors = {"#004d00", "#00b300"};
 
     public void draw(Graphics2D g2d, int width, int height) {
         TreeLayers = 3;
@@ -19,8 +21,8 @@ public class Tree {
             int y = height - (i + 1) * TreeTriangleHeight;
 
             // Gradient color
-            GradientPaint TreeGradientColor = new GradientPaint(x, y, Color.decode("#004d00"),
-                    x + TreeTriangleWidth / 2, y + TreeTriangleHeight, Color.decode("#00b300"));
+            GradientPaint TreeGradientColor = new GradientPaint(x, y, Color.decode(TreeColors[0]),
+                    x + TreeTriangleWidth / 2, y + TreeTriangleHeight, Color.decode(TreeColors[1]));
             g2d.setPaint(TreeGradientColor);
 
             // Draw the tree

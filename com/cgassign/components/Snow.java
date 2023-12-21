@@ -12,6 +12,8 @@ public class Snow {
     private Random r = new Random();
     private Line line = new Line();
 
+    private String[] SnowballsColors = {"#e4e5e5", "#d1ddf3"};
+
     public void draw(Graphics2D g2d, int width, int height) {
         SnowballsBlurLevel = 5;
         SnowballsRadius = 3;
@@ -27,7 +29,7 @@ public class Snow {
                 continue;
             }
 
-            Color snowflakeColor = Color.decode("#FFFFFF");
+            Color snowflakeColor = Color.decode(SnowballsColors[r.nextInt(2)]);
             g2d.setColor(snowflakeColor);
 
             // Blur effect
