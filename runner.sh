@@ -26,12 +26,5 @@ fi
 # Run Main class
 java Main
 
-# Check the exit status and display success/failure message
-if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Success${NC}"
-else
-    echo -e "${RED}Failed${NC}"
-fi
-
 # Remove all generated .class files recursively
 find . -name '*.class' -exec rm -f {} +
