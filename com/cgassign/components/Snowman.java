@@ -19,7 +19,7 @@ public class Snowman {
 
         public void draw(Graphics2D g2d, int width, int height) {
                 totalHeight = ((0.75) * height);
-                bottomDiameter = (totalHeight) / 3.5;
+                bottomDiameter = (totalHeight) / 4;
 
                 if (bottomDiameter > width) {
                         bottomDiameter = width;
