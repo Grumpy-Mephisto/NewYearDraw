@@ -1,19 +1,20 @@
 package com.cgassign.gui;
 
 import com.cgassign.components.*;
-// import com.cgassign.functions.*;
+import com.cgassign.functions.*;
 import java.awt.*;
 import javax.swing.*;
 
 public class NewYearImage extends JPanel {
     // private Line line = new Line();
-    // private Curve curve = new Curve();
+    private Curve curve = new Curve();
     // private Circle circle = new Circle();
     // private Triangle triangle = new Triangle();
 
     private Snow Snow = new Snow();
     private Tree ChristmasTree = new Tree();
     private Snowman Snowman = new Snowman();
+    private Elsa Elsa = new Elsa();
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -35,9 +36,14 @@ public class NewYearImage extends JPanel {
         Snow.draw(g2d, getWidth(), getHeight());
 
         // Tree
-        ChristmasTree.draw(g2d, getWidth(), getHeight());
+        ChristmasTree.draw(g2d, getWidth() + 400, getHeight() + 100);
 
         // Snowman
-        Snowman.draw(g2d, 1000, 700);
+        Snowman.draw(g2d, getWidth() - 400, getHeight() + 100);
+
+        // Fireworks
+
+        // Elsa
+        Elsa.draw(g2d, getWidth(), getHeight());
     }
 }
