@@ -1,38 +1,25 @@
 package com.cgassign.functions;
 
-import java.awt.Point;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.Path2D;
 import java.awt.RenderingHints;
 
 public class Curve {
-    public void drawBezierCurve(Graphics g, Point p0, Point p1, Point p2, Point p3) {
-        if (p0 != null && p1 != null && p2 != null && p3 != null) {
-            Graphics2D g2d = (Graphics2D) g;
-            g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                    RenderingHints.VALUE_ANTIALIAS_ON);
+    public void drawBezierCurve(Graphics g, int x1, int y1, int cx1, int cy1, int cx2, int cy2,
+            int x2, int y2) {
+        Graphics2D g2d = (Graphics2D) g;
 
-            Path2D.Double path = new Path2D.Double();
-            path.moveTo(p0.getX(), p0.getY());
+        // Set rendering hints for smoother shapes
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-            for (double t = 0.0; t <= 1.0; t += 0.001) {
-                double oneMinusT = 1 - t;
-                double oneMinusTSquared = oneMinusT * oneMinusT;
-                double tSquared = t * t;
+        for (int i = 0; i < 1000; i++) {
+            double t = i / 1000.0;
+            double x = Math.pow(1 - t, 3) * x1 + 3 * t * Math.pow(1 - t, 2) * cx1
+                    + 3 * (1 - t) * t * t * cx2 + Math.pow(t, 3) * x2;
+            double y = Math.pow(1 - t, 3) * y1 + 3 * t * Math.pow(1 - t, 2) * cy1
+                    + 3 * (1 - t) * t * t * cy2 + Math.pow(t, 3) * y2;
 
-                double x = oneMinusT * oneMinusT * oneMinusT * p0.getX()
-                        + 3 * oneMinusT * oneMinusTSquared * p1.getX()
-                        + 3 * oneMinusTSquared * t * p2.getX() + tSquared * t * p3.getX();
-
-                double y = oneMinusT * oneMinusT * oneMinusT * p0.getY()
-                        + 3 * oneMinusT * oneMinusTSquared * p1.getY()
-                        + 3 * oneMinusTSquared * t * p2.getY() + tSquared * t * p3.getY();
-
-                path.lineTo(x, y);
-            }
-
-            g2d.draw(path);
+            g2d.drawLine((int) x, (int) y, (int) x, (int) y);
         }
     }
 }

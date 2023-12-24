@@ -1,8 +1,9 @@
 package com.cgassign.components;
 
+import com.cgassign.functions.Line;
+
 import java.awt.*;
 import java.util.Random;
-import com.cgassign.functions.Line;
 
 public class Snow {
     private int SnowballsBlurLevel;

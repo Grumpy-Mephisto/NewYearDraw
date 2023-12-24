@@ -1,7 +1,9 @@
 package com.cgassign.components;
 
+import com.cgassign.functions.Line;
+import com.cgassign.functions.Circle;
+
 import java.awt.*;
-import com.cgassign.functions.*;
 
 public class Snowman {
         private double totalHeight;
