@@ -1,13 +1,13 @@
 package com.cgassign.gui;
 
 import com.cgassign.components.*;
-import com.cgassign.functions.*;
+// import com.cgassign.functions.*;
 import java.awt.*;
 import javax.swing.*;
 
 public class NewYearImage extends JPanel {
     // private Line line = new Line();
-    private Curve curve = new Curve();
+    // private Curve curve = new Curve();
     // private Circle circle = new Circle();
     // private Triangle triangle = new Triangle();
 
