@@ -2,6 +2,7 @@ package newyeardraw;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import java.awt.Dimension;
 import graphics.NewYearImage;
 
 public class App {
@@ -10,7 +11,7 @@ public class App {
             JFrame frame = new JFrame("New Year Image");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             NewYearImage newYearImage = new NewYearImage();
-            newYearImage.setPreferredSize(new java.awt.Dimension(600, 600));
+            newYearImage.setPreferredSize(new Dimension(600, 600));
             frame.getContentPane().add(newYearImage);
             frame.pack();
             frame.setLocationRelativeTo(null);
