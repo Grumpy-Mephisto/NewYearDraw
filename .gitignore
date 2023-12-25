@@ -16,3 +16,6 @@ build/
 
 # Ignore Gradle build output directory
 build
+
+# VsCode
+.vscode/
