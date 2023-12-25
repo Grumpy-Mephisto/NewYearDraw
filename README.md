@@ -7,6 +7,7 @@
 ## `📦` Prerequisites
 
 - [Java](https://www.java.com/en/download/) (Used version: 21.0.1)
+- [Gradle](https://gradle.org/install/) (Used version: 8.5)
 - [Git](https://git-scm.com/downloads) (Used version: 2.43.0)
 
 ## `🚀` Usage
@@ -18,11 +19,9 @@ git clone https://github.com/Mephisto-Grumpy/NewYearDraw
 # Go into the repository
 cd NewYearDraw
 
-# Run the app
-./runner.sh
-
-# If you can't run the app, try to give it permission
-chmod +x runner.sh
+# Run the application
+gradle run # or
+gradle runWithJavaExec
 ```
 
 ## 📝 License
