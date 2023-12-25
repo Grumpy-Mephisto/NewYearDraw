@@ -4,7 +4,12 @@
     <img src=".github/assets/preview.png" alt="Preview">
 </div>
 
-## 🚀 Usage
+## `📦` Prerequisites
+
+- [Java](https://www.java.com/en/download/) (Used version: 21.0.1)
+- [Git](https://git-scm.com/downloads) (Used version: 2.43.0)
+
+## `🚀` Usage
 
 ```bash
 # Clone this repository
@@ -15,6 +20,9 @@ cd NewYearDraw
 
 # Run the app
 ./runner.sh
+
+# If you can't run the app, try to give it permission
+chmod +x runner.sh
 ```
 
 ## 📝 License
