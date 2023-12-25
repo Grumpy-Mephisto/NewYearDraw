@@ -1,16 +1,10 @@
 package com.cgassign.gui;
 
 import com.cgassign.components.*;
-// import com.cgassign.functions.*;
 import java.awt.*;
 import javax.swing.*;
 
 public class NewYearImage extends JPanel {
-    // private Line line = new Line();
-    // private Curve curve = new Curve();
-    // private Circle circle = new Circle();
-    // private Triangle triangle = new Triangle();
-
     private Snow Snow = new Snow();
     private Tree ChristmasTree = new Tree();
     private Snowman Snowman = new Snowman();
@@ -32,7 +26,7 @@ public class NewYearImage extends JPanel {
         float[] BackgroundDist = {0.0f, 0.5f, 1.0f};
         g2d.setPaint(new LinearGradientPaint(getWidth() / 2, 0, getWidth() / 2, getHeight(),
                 BackgroundDist, BackgroundColors));
-        g2d.fillRect(0, 0, getWidth(), getHeight());
+        g2d.fillRect(0, 0, getWidth() + 1, getHeight() + 1);
 
         // Snow
         Snow.draw(g2d, getWidth(), getHeight());
