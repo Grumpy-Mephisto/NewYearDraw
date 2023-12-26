@@ -7,12 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import functions.Line;
 
 public class Elsa {
     private final String filename = "src/main/resources/elsa-pixel.csv";
 
     private List<Color> colorsList;
     private List<int[]> coordinatesList;
+
+    private Line line = new Line();
 
     public Elsa() {
         colorsList = new ArrayList<>();
@@ -57,7 +60,7 @@ public class Elsa {
             int x = coordinates[0];
             int y = coordinates[1];
 
-            g2d.drawLine(x, y, x, y);
+            line.drawBresenhamLine(g2d, x, y, x, y);
         }
     }
 }
