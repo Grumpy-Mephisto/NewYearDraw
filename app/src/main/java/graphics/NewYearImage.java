@@ -10,7 +10,7 @@ public class NewYearImage extends JPanel {
     private Tree ChristmasTree = new Tree();
     private Snowman Snowman = new Snowman();
     private Confetti Confetti = new Confetti();
-    private Elsa Elsa = new Elsa();
+    // private Elsa Elsa = new Elsa();
 
     @Override
     protected void paintComponent(Graphics g) {
