@@ -41,6 +41,6 @@ public class NewYearImage extends JPanel {
         Confetti.draw(g2d, getWidth(), getHeight(), 100);
 
         // Elsa
-        Elsa.draw(g2d, getWidth(), getHeight());
+        // Elsa.draw(g2d, getWidth(), getHeight()); // illegal ways
     }
 }
