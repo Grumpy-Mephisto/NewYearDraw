@@ -10,6 +10,7 @@ public class NewYearImage extends JPanel {
     private Tree ChristmasTree = new Tree();
     private Snowman Snowman = new Snowman();
     private Confetti Confetti = new Confetti();
+    private Star Star = new Star();
     // private Elsa Elsa = new Elsa();
 
     @Override
@@ -42,5 +43,8 @@ public class NewYearImage extends JPanel {
 
         // Elsa
         // Elsa.draw(g2d, getWidth(), getHeight()); // illegal ways
+
+        // Star
+        Star.draw(g2d, getWidth() + 400, getHeight() - 425, 200);
     }
 }
