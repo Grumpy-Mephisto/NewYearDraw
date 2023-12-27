@@ -9,7 +9,6 @@ public class NewYearImage extends JPanel {
     private Snow Snow = new Snow();
     private Tree ChristmasTree = new Tree();
     private Snowman Snowman = new Snowman();
-    private Firework Firework = new Firework();
     private Confetti Confetti = new Confetti();
     private Elsa Elsa = new Elsa();
 
@@ -37,9 +36,6 @@ public class NewYearImage extends JPanel {
 
         // Snowman
         Snowman.draw(g2d, getWidth() - 400, getHeight() + 100);
-
-        // Fireworks
-        Firework.draw(g2d, getWidth(), getHeight(), 10, 100);
 
         // Confetti
         Confetti.draw(g2d, getWidth(), getHeight(), 100);
