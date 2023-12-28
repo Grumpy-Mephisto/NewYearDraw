@@ -11,7 +11,8 @@ public class NewYearImage extends JPanel {
     private Star Star = new Star();
     private Snowman Snowman = new Snowman();
     private Confetti Confetti = new Confetti();
-    private Elsa Elsa = new Elsa();
+    // private Elsa Elsa = new Elsa();
+    private Doraemon Doraemon = new Doraemon();
 
     private String[] BackgroundColors = {"#0c1445", "#2d2351", "#4c408e"};
 
@@ -47,6 +48,9 @@ public class NewYearImage extends JPanel {
         Confetti.draw(g2d, getWidth(), getHeight(), 100);
 
         // Elsa
-        Elsa.draw(g2d, getWidth(), getHeight()); // illegal ways
+        // Elsa.draw(g2d, getWidth(), getHeight()); // illegal ways
+
+        // Doraemon
+        Doraemon.draw(g2d, 0, 158);
     }
 }
