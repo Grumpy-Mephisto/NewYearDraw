@@ -6,7 +6,7 @@
 
 ## `📝` Structure
 
-````bash
+```bash
 .
 └── src
     └── main
@@ -47,7 +47,7 @@ cd NewYearDraw
 # Run the application
 gradle run # or
 gradle runWithJavaExec
-````
+```
 
 ## 📝 License
 
