@@ -52,10 +52,6 @@ public class Elsa {
             int[] coordinates = coordinatesList.get(i);
             Color color = colorsList.get(i);
 
-            if (color.getRed() == 0 && color.getGreen() == 0 && color.getBlue() == 0) {
-                continue;
-            }
-
             g2d.setColor(color);
             int x = coordinates[0];
             int y = coordinates[1];
