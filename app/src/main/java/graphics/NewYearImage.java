@@ -51,6 +51,6 @@ public class NewYearImage extends JPanel {
         // Elsa.draw(g2d, getWidth(), getHeight()); // illegal ways
 
         // Doraemon
-        Doraemon.draw(g2d, 0, 158);
+        Doraemon.draw(g2d, getWidth(), getHeight());
     }
 }

@@ -102,6 +102,6 @@ public class Doraemon {
         g2img.setColor(Color.decode(DoraemonColor[1]));
         g2img.drawOval(390, 190, 40, 40);
 
-        g2d.drawImage(image, width, height, null);
+        g2d.drawImage(image, 0, 158, null);
     }
 }
