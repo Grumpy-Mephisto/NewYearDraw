@@ -4,6 +4,31 @@
     <img src=".github/assets/preview.png" alt="Preview">
 </div>
 
+## `📝` Structure
+
+````bash
+.
+└── src
+    └── main
+        └── java
+            ├── components  # For storing characters and various components
+            │   ├── Confetti.java
+            │   ├── Doraemon.java
+            │   ├── Snow.java
+            │   ├── Snowman.java
+            │   ├── Star.java
+            │   └── Tree.java
+            ├── functions  # For storing different functions
+            │   ├── Line.java
+            │   ├── Curve.java
+            │   ├── Circle.java
+            │   └── Triangle.java
+            ├── graphics  # For storing graphics
+            │   ├── NewYearImage.java
+            └── newyeardraw  # For storing the main class
+                └── App.java
+```
+
 ## `📦` Prerequisites
 
 - [Java](https://www.java.com/en/download/) (Used version: 21.0.1)
@@ -22,7 +47,7 @@ cd NewYearDraw
 # Run the application
 gradle run # or
 gradle runWithJavaExec
-```
+````
 
 ## 📝 License
 
