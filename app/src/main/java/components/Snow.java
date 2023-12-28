@@ -47,8 +47,8 @@ public class Snow {
 
             // Draw the snowflake
             g2d.setColor(snowflakeColor);
-            line.drawBresenhamLine(g2d, x, y, x, y);
-            line.drawBresenhamLine(g2d, x, y, x, y);
+            line.drawBresenhamLine(g2d, x, y, x, y, 1);
+            line.drawBresenhamLine(g2d, x, y, x, y, 1);
         }
     }
 }

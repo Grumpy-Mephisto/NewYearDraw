@@ -60,7 +60,7 @@ public class Elsa {
             int x = coordinates[0];
             int y = coordinates[1];
 
-            line.drawBresenhamLine(g2d, x, y, x, y);
+            line.drawBresenhamLine(g2d, x, y, x, y, 1);
         }
     }
 }

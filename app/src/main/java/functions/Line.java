@@ -3,7 +3,7 @@ package functions;
 import java.awt.Graphics;
 
 public class Line {
-    public void drawBresenhamLine(Graphics g, int x1, int y1, int x2, int y2) {
+    public void drawBresenhamLine(Graphics g, int x1, int y1, int x2, int y2, int thickness) {
         int dx = Math.abs(x2 - x1);
         int dy = Math.abs(y2 - y1);
         int p = 2 * dy - dx;
@@ -21,7 +21,7 @@ public class Line {
             xEnd = x2;
         }
 
-        g.drawLine(x, y, x, y);
+        g.fillRect(x, y, thickness, thickness);
 
         while (x < xEnd) {
             x++;
@@ -31,7 +31,7 @@ public class Line {
                 y++;
                 p += twoDyMinusDx;
             }
-            g.drawLine(x, y, x, y);
+            g.fillRect(x, y, thickness, thickness);
         }
     }
 }

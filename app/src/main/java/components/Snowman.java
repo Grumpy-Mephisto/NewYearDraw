@@ -19,7 +19,7 @@ public class Snowman {
     private Line line = new Line();
     private Circle circle = new Circle();
 
-    private String[] SnowmanColors = {"#ffffff", "#000000"};
+    private String[] SnowmanColors = {"#ffffff", "#000000", "#FF0000", "#FFD700"};
 
     public void draw(Graphics2D g2d, int width, int height) {
         totalHeight = ((0.75) * height);
@@ -45,27 +45,27 @@ public class Snowman {
         circle.drawCircle(g2d, centerX, (int) bottomCenterY, (int) (bottomDiameter / 2), true);
 
         // Middle Oval
-        circle.drawCircle(g2d, centerX, (int) middleCenterY, (int) (middleDiameter / 2), true);
+        circle.drawCircle(g2d, centerX, (int) middleCenterY + 25, (int) (middleDiameter / 2), true);
 
         // Head Oval
-        circle.drawCircle(g2d, centerX, (int) headCenterY, (int) (headDiameter / 2), true);
+        circle.drawCircle(g2d, centerX, (int) headCenterY + 30, (int) (headDiameter / 2), true);
 
         g2d.setColor(Color.decode(SnowmanColors[1]));
 
         // Eyes Fill Oval
         circle.drawCircle(g2d, (int) ((centerX) - (headDiameter / 4)),
-                ((int) (headCenterY - (headDiameter / 4))), (int) eyeDiameter / 2, true);
+                ((int) (headCenterY - (headDiameter / 4))) + 30, (int) eyeDiameter / 2, true);
         circle.drawCircle(g2d, (int) ((centerX) + (headDiameter / 4) - eyeDiameter),
-                ((int) (headCenterY - (headDiameter / 4))), (int) eyeDiameter / 2, true);
+                ((int) (headCenterY - (headDiameter / 4))) + 30, (int) eyeDiameter / 2, true);
 
         // Arms Line
         line.drawBresenhamLine(g2d, (int) ((centerX) - (middleDiameter / 4)),
-                ((int) (middleCenterY - (middleDiameter / 4))),
+                ((int) (middleCenterY - (middleDiameter / 4))) + 30,
                 (int) ((centerX) - (middleDiameter / 4) - middleDiameter / 2),
-                (int) (middleCenterY - (middleDiameter / 4) - middleDiameter / 3));
+                (int) (middleCenterY - (middleDiameter / 4) - middleDiameter / 3), 2);
         line.drawBresenhamLine(g2d, (int) ((centerX) + (middleDiameter / 4)),
-                ((int) (middleCenterY - (middleDiameter / 4))),
+                ((int) (middleCenterY - (middleDiameter / 4))) + 30,
                 (int) ((centerX) + (middleDiameter / 4) + middleDiameter / 2),
-                (int) (middleCenterY - (middleDiameter / 4) - middleDiameter / 3));
+                (int) (middleCenterY - (middleDiameter / 4) - middleDiameter / 3), 2);
     }
 }
