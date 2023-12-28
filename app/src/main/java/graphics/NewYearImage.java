@@ -13,6 +13,8 @@ public class NewYearImage extends JPanel {
     private Star Star = new Star();
     // private Elsa Elsa = new Elsa();
 
+    private String[] BackgroundColors = {"#0c1445", "#2d2351", "#4c408e"};
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -22,11 +24,11 @@ public class NewYearImage extends JPanel {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         // Background
-        Color[] BackgroundColors =
-                {Color.decode("#0c1445"), Color.decode("#2d2351"), Color.decode("#4c408e")};
+        Color[] color = {Color.decode(BackgroundColors[0]), Color.decode(BackgroundColors[1]),
+                Color.decode(BackgroundColors[2])};
         float[] BackgroundDist = {0.0f, 0.5f, 1.0f};
         g2d.setPaint(new LinearGradientPaint(getWidth() / 2, 0, getWidth() / 2, getHeight(),
-                BackgroundDist, BackgroundColors));
+                BackgroundDist, color));
         g2d.fillRect(0, 0, getWidth() + 1, getHeight() + 1);
 
         // Snow
