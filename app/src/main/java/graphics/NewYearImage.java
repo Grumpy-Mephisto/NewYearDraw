@@ -3,7 +3,10 @@ package graphics;
 import components.*;
 
 import java.awt.*;
+import java.io.File;
 import javax.swing.*;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 public class NewYearImage extends JPanel {
     private Snow Snow = new Snow();
@@ -52,5 +55,23 @@ public class NewYearImage extends JPanel {
 
         // Doraemon
         Doraemon.draw(g2d, getWidth(), getHeight());
+    }
+
+    public void saveImage() {
+        BufferedImage imageBuffer =
+                new BufferedImage(getWidth(), getHeight(), BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = imageBuffer.createGraphics();
+
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        paintComponent(g2d);
+
+        g2d.dispose();
+
+        try {
+            ImageIO.write(imageBuffer, "png", new File("Assignment1_6505437_65050431.png"));
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+        }
     }
 }
